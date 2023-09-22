@@ -1,0 +1,218 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="./images/yes.png">
+        <title>Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div>
+            <nav>
+                <router-link to="/" Style="font-weight: bold; float: left; text-decoration: none; color: black;">Kaimons Portfolio for SIT120</router-link>
+                <a href="/info" Style="float: right; padding-right: 10px; text-decoration: none; color: black;">Contact Info</a>
+                <a href="/gallery" Style="float: right; padding-right: 10px; text-decoration: none; color: black;">Image Gallery</a>
+            </nav>
+            <div class="container">
+                <img src="./images/header.jpg" style="width:100%; height: 200px;">
+                <h1 class="centered">Welcome to my Portfolio</h1>
+              </div>
+            <br>
+
+            <div>
+                <h2>About me</h2>
+                <p style="padding-left: 25%; padding-right: 25%;">I am a university student currently studying for a Bachelor of Information 
+                    Technology at Deakin university. My skills range from applicaton and web development, to creating interactive experiences
+                    and user centered design. I am proficient in the following coding languages, frameworks and platforms:
+                    <div style="padding-left: 38%;">
+                        <table class="table">
+                            <tr>
+                                <th>Languages</th>
+                                <th>Frameworks</th>
+                                <th>Platforms</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                        <li>C#</li>
+                                        <li>C++</li>
+                                        <li>Java</li>
+                                        <li>React</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Vue</li>
+                                        <li>React</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>AWS</li>
+                                        <li>Cloudent</li>
+                                        <li>Google Cloud</li>
+                                        <li>Microsoft Azure</li>
+                                        <li>Docker</li>
+                                        <li>Unity</li>
+                                        <li>Unreal Engine</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+                </p>                
+            </div>
+                
+            <br>
+            <br>
+    
+            <div>
+                <h3>Past Projects</h3>
+                <div class="projects">
+                    <div id="project1" class="project">
+                        <h4>Blender Asset Modelling</h4>
+                        <p></p>
+                        <p>I have experience in Blender, for a university project I modelled assets to
+                            be used in an underwater interactive experience. these models included one highly detailed
+                            'hero' model and several less detailed scenery pieces.
+                        </p>
+                        <br>
+                        <div>
+                            <button v-if="!showImages" @click="showImages = !showImages">See images</button>
+                            <div v-if="showImages" class="row">
+                                <div class="column">
+                                    <img src="images/OctRende3.png">
+                                    <img src="images/OctRender1.png">
+                                    <img src="images/OctRender7.png">
+                                </div>
+                                <div class="column">
+                                    <img src="images/KelpRender1.png">
+                                    <img src="images/KelpRender2.png">
+                                    <img src="images/KelpRender4.png">
+                                </div>
+                                <div class="column">
+                                    <img src="images/TubeRender1.png">
+                                    <img src="images/StumpRender2.png">
+                                    <img src="images/TubeRender3.png">
+                                </div>
+                            </div>
+                            <p></p>
+                            <button v-if="showImages" @click="showImages = !showImages">Hide images</button>  
+                        </div>   
+                    </div>
+
+                    <div id="project2" class="project">
+                        <h4>Content Creation for VR experiences</h4>
+                        <p></p>
+                        <p>Using Unity I created interactive vr experiences, the largest one I made had the user enter a submersible
+                            and clean up the ocean floor. The aim of this was to create an interactive educational experience.
+                            
+                        </p>
+                        <br>
+                        <div>
+                            <button v-if="!showImages2" @click="showImages2 = !showImages2">See images</button>
+                            <div v-if="showImages2" class="row3">
+                                <div class="column3">
+                                    <img src="images/under1.png">
+                                    <img src="images/under3.png">
+                                    <img src="images/under2.png">
+                                </div>
+                            </div>
+                            <p></p>
+                            <button v-if="showImages2" @click="showImages2 = !showImages2">Hide images</button>  
+                        </div>   
+                    </div>
+                    <div id="project3" class="project">
+                        <h4>Mobile Application Development</h4>
+                        <p></p>
+                        <p>Using android studio I have created several mobile applicatons, including a workout timer app
+                            and a Lost and Found app. The Lost and Found application allowed users to add lost items to a database that 
+                            was then displayed on a map, showing what was lost and where, once an item was found it could be removed from
+                            the database.
+                        </p>
+                        <br>
+                        <div>
+                            <button v-if="!showImages3" @click="showImages3 = !showImages3">See images</button>
+                            <div v-if="showImages3" class="row1">
+                                <div class="column1">
+                                    <img src="images/Picture2.png">
+                                </div>
+                                <div class="column1">
+                                    <img src="images/Picture1.png">
+                                </div>
+                            </div>
+                            <p></p>
+                            <button v-if="showImages3" @click="showImages3 = !showImages3">Hide images</button>  
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+        </div>
+        <div>
+            <h2>Contact Infomation</h2>
+            <p><b>Name:</b> Kaimon De Bruijne</p>
+            <p><b>Address:</b> 29 Toppings Road, Wonga Park</p>
+            <p><b>Phone:</b> 0490 856 111</p>
+            <p><b>Email:</b> kdebruijne@deakin.edu.au</p>
+        </div>
+    </body>
+    <script>
+        let project1 = new Vue({
+            el: '#project1',
+            data: {
+                showImages: false
+            },
+        })
+    </script>
+    <script>
+        let project2 = new Vue({
+            el: '#project2',
+            data: {
+                showImages2: false
+            },
+        })
+    </script>
+    <script>
+        let project3 = new Vue({
+            el: '#project3',
+            data: {
+                showImages3: false
+            },
+        })
+    </script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                assignments: [
+                    {
+                        name: 'assignment1',
+                        dueTomorrow: true,
+                        id: 1,
+                    },
+                    {
+                        name: 'assignment2',
+                        dueTomorrow: true,
+                        id: 2,
+                    },
+                    {
+                        name: 'assignment3',
+                        dueTomorrow: true,
+                        id: 3,
+                    },
+                ],
+            },
+        })
+    </script>
+</html>
